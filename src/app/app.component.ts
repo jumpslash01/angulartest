@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'Week 2';
+  
+  counter = 0;
+
+  OnCoolButtonClick(){
+    this.counter++ ;
+    if (this.counter % 5 == 0){
+      this.title = "fizzbuzz"
+    }
+    else if (this.counter % 2 == 0){
+      this.title = "Fizz"
+    }
+    else this.title = "Buzz"
+  }
 }
